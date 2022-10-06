@@ -1,25 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import TodoList from './Components/TodoList';
-import NavBar from './Components/NavBar';
-import "./styles.css"
-import Home from './Components/Home';
-import About from './Components/About';
-import { Routes, Route} from "react-router-dom"
-
 
 
 
 function App() {
+  const [todo, setTodo] = useState([])
+
+useEffect (() =>{
+  fetch('http://localhost:3000/todoexp')
+  .then((response) => response.json())
+  .then (todo => setTodo(todo))
+}, [])
+console.log(todo)
+
 
   return (
     <div className="todo-app">
-     <NavBar />
-      <TodoList />
-      <Routes> 
-        <Route path='/' element={<Home />}  />
-        <Route path='/about' element={<About />}  />
-      </Routes>
+     
+      <TodoList todo={todo} />
+      
     </div>
   );
 }
