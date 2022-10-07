@@ -14,7 +14,7 @@ function TodoList(todo ) {
       <tr>
         
         <th>
-          <h3 className="ui center aligned header">Description</h3>
+          <h3 className="ui center aligned header">Description of todos</h3>
         </th>
         
       </tr>
