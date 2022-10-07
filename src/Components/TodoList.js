@@ -52,4 +52,8 @@ function TodoForm(props) {
             Add todo
           </button>
         </>
+         )}
+         </form>
+       );
+     }
 export default TodoList
