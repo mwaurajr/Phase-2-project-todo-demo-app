@@ -1,4 +1,4 @@
-# phase-1-independent-project
+# Todo Demo App
 
 The project is simply a DEMO App showing the todo-list which is a list of items one has done and those which are incomplete . It helps an individual to remember what he or she ought to have done or is supposed to be doing. 
 
@@ -8,12 +8,16 @@ When a task is finished or completed the are line-stricken through so one is not
 [License](#license)
 [Authors Info](#author)
 
+## Features
 
 ## Languages used
 
 HTML5
 React Javascript
 CSS
+React Hooks : useState, useEffect, useRef, useContext
+react-beautiful-dnd, react-icons
+
 
 ## Bugs
 
@@ -30,7 +34,15 @@ SSH: `git@github.com:mwaurajr/Phase-2-project-todo-demo-app.git`
 
 HTTPS: `https://github.com/mwaurajr/Phase-2-project-todo-demo-app.git`
 
+## Installation of dependencies
 
+Install dependencies. Make sure you already have nodejs & npm installed in your system.
+
+$ npm install # or yarn
+Run it
+
+$ npm start # or yarn start
+  
 ## License
 [MIT LICENSE](License)
 
