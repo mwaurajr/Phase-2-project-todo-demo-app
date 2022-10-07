@@ -1,30 +1,26 @@
-import React from 'react'
-import TodoDIsplay from './TodoDisplay'
-import Todo from './Todo';
+import React, { useState, useEffect, useRef } from 'react';
 
+function TodoForm(props) {
+  const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
-function TodoList(todo ) {
-  const todoItem = todo.map(todo =>{
-    return <TodoDIsplay todo={todo} />
+  const inputRef = useRef(null);
 
-  }) 
-  return (
-    <table className="ui celled striped padded table">
-    <tbody>
-      <tr>
-        
-        {/* <th>
-          <h3 className="ui center aligned header">Description of todos</h3>
-        </th>
-         */}
-      </tr>
-     {
-      todoItem
-     }
-      
-    </tbody>
-  </table>
-  )
-}
+  useEffect(() => {
+    inputRef.current.focus();
+  });
+
+  const handleChange = e => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    props.onSubmit({
+      id: Math.floor(Math.random() * 10000),
+      text: input
+    });
+    setInput('');
+  };
 
 export default TodoList
