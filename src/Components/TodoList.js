@@ -13,10 +13,10 @@ function TodoList(todo ) {
     <tbody>
       <tr>
         
-        <th>
+        {/* <th>
           <h3 className="ui center aligned header">Description of todos</h3>
         </th>
-        
+         */}
       </tr>
      {
       todoItem
