@@ -1,57 +1,30 @@
-import React, { useState } from 'react';
-import TodoForm from './TodoForm';
+import React from 'react'
+import TodoDIsplay from './TodoDisplay'
 import Todo from './Todo';
 
-function TodoList() {
-  const [todos, setTodos] = useState([]);
 
-  const addTodo = todo => {
-    if (!todo.text || /^\s*$/.test(todo.text)) {
-      return;
-    }
+function TodoList(todo ) {
+  const todoItem = todo.map(todo =>{
+    return <TodoDIsplay todo={todo} />
 
-    const newTodos = [todo, ...todos];
-
-    setTodos(newTodos);
-    console.log(...todos);
-  };
-
-  const updateTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return;
-    }
-
-    setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
-  };
-
-  const removeTodo = id => {
-    const removedArr = [...todos].filter(todo => todo.id !== id);
-
-    setTodos(removedArr);
-  };
-
-  const completeTodo = id => {
-    let updatedTodos = todos.map(todo => {
-      if (todo.id === id) {
-        todo.isComplete = !todo.isComplete;
-      }
-      return todo;
-    });
-    setTodos(updatedTodos);
-  };
-
+  }) 
   return (
-    <>
-      <h1>What's the Plan for Today?</h1>
-      <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
-    </>
-  );
+    <table className="ui celled striped padded table">
+    <tbody>
+      <tr>
+        
+        <th>
+          <h3 className="ui center aligned header">Description</h3>
+        </th>
+        
+      </tr>
+     {
+      todoItem
+     }
+      
+    </tbody>
+  </table>
+  )
 }
 
-export default TodoList;
+export default TodoList

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
+import TodoForm from './Components/TodoForm';
 import TodoList from './Components/TodoList';
 
 
@@ -17,8 +18,8 @@ console.log(todo)
 
   return (
     <div className="todo-app">
-     
-      <TodoList todo={todo} />
+      <h1>todo list</h1>
+     <TodoForm />
       
     </div>
   );
