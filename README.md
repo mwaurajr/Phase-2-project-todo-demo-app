@@ -23,12 +23,12 @@ There is no bugs but the project is open for advancement and improvements by any
 Any contributions are very much welcomed. The project is at it's initial stages though, you can fork it to your local machine and contribute.
 
 ## Set up directions
+You can use either the SSH or HTTPS to clone for contributions to your local pc. Below are the links
 
 
+SSH: `git@github.com:mwaurajr/Phase-2-project-todo-demo-app.git`
 
-SSH: `git@github.com:mwaurajr/phase-1-independent-project.git`
-
-HTTPS: `https://github.com/mwaurajr/phase-1-independent-project.git`
+HTTPS: `https://github.com/mwaurajr/Phase-2-project-todo-demo-app.git`
 
 
 ## License
