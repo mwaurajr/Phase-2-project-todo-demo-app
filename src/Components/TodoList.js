@@ -37,4 +37,19 @@ function TodoForm(props) {
           <button onClick={handleSubmit} className='todo-button edit'>
             Update
           </button>
+          </>
+      ) : (
+        <>
+          <input
+            placeholder='Add a todo'
+            value={input}
+            onChange={handleChange}
+            name='text'
+            className='todo-input'
+            ref={inputRef}
+          />
+          <button onClick={handleSubmit} className='todo-button'>
+            Add todo
+          </button>
+        </>
 export default TodoList
